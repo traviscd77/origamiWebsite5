@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact - Origami Today</title>
+    <link href="css/origami.css" rel="stylesheet">
+    <link href="favicon.ico" rel="icon">
+  </head>
+  <body>
+    <div id="wrapper">
+      <a href="#main-content" id="skip-link">Skip to main content</a>
+      <header role="banner">
+        <h1><img src="images/crane.png" alt="Origami Today logo" width="69" height="50">Contact</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="howto.html">How To</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html" id="current-page">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main-content" tabindex="-1" role="main">
+        <h2>Connect with Me</h2>
+        <address>
+          <ul>
+            <li class="item-phone">828.555.1234</li>
+            <li class="item-email"><a href="mailto:haylie@example.com">haylie@example.com</a></li>
+          </ul>
+        </address>
+        <p>Use the form below to contact me for specific events. Fields with a * are required.</p>
+        <form action="process-form.html" method="get" role="form">
+          <fieldset>
+            <legend>Contact Info</legend>
+            <label for="fname">*First Name:</label>
+            <input type="text" id="fname" name="First Name" required><br>
+
+            <label for="lname">*Last Name:</label>
+            <input type="text" id="lname" name="Last Name" required><br>
+
+            <label for="email">*Email:</label>
+            <input type="email" id="email" name="Email" required><br>
+
+            <label for="phone">*Phone:</label>
+            <input type="tel" id="phone" name="Phone" required>
+          </fieldset>
+
+          <fieldset>
+            <legend>Event Details</legend>
+            <label for="type">*What type of event do you need origami for?</label><br>
+            <input type="text" id="type" name="Event Type" list="events" required><br>
+            <datalist id="events">
+              <option>Baptism</option>
+              <option>Birthday</option>
+              <option>Briss</option>
+              <option>Funeral</option>
+              <option>Mitzvah</option>
+              <option>Opening</option>
+              <option>Quincaenera</option>
+              <option>Wedding</option>
+            </datalist>
+
+            <label for="number">*Approximately how many pieces do you need?</label><br>
+            <input type="number" id="number" name="Number of Pieces" min="1" required><br>
+
+            <label for="date">*Event Date:</label><br>
+            <input type="date" id="date" name="Event Date" required><br>
+
+            *Must the origami be specific colors? If so, explain in the comments section below.<br>
+            <input type="radio" name="Specific Colors" id="no-color" value="No" required><label for="no-color">No</label><br>
+            <input type="radio" name="Specific Colors" id="yes-color" value="Yes"><label for="yes-color">Yes</label><br>
+
+            *Must the origami be a specific size? If so, explain in the comments section below.<br>
+            <input type="radio" name="Specific Size" id="no-size" value="No" required><label for="no-size">No</label><br>
+            <input type="radio" name="Specific Size" id="yes-size" value="Yes"><label for="yes-size">Yes</label><br>
+
+            <label for="comments">Other details, requests, or comments?</label><br>
+            <textarea cols="50" rows="6" id="comments" name="Comments"></textarea>
+          </fieldset>
+
+          <input type="submit" value="Send">
+
+        </form>
+      </main>
+      <footer role="contentinfo">
+        <p><small>All content &copy; 2018 Haylie Elise</small></p>
+      </footer>
+    </div>
+  </body>
+</html>
